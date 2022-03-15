@@ -1,0 +1,43 @@
+1), 2)
+db.createCollection("products")
+db.products.insertOne({_id: 1, title: "Cartuchera", price: 4200})
+db.products.insertOne({_id: 2, title: "Lapicera", price: 500})
+db.products.insertOne({_id: 3, title: "Lápiz", price: 2500})
+db.products.insertOne({_id: 4, title: "Cuaderno", price: 2000})
+db.products.insertOne({_id: 5, title: "Marcador", price: 3500})
+db.products.insertOne({_id: 6, title: "Regla", price: 1000})
+db.products.insertOne({_id: 7, title: "Escuadra", price: 1400})
+db.products.insertOne({_id: 8, title: "Transportador", price: 3400})
+db.products.insertOne({_id: 9, title: "Cartuchera Grande", price: 2400})
+db.products.insertOne({_id: 10, title: "Goma de Borrar", price: 2600})
+
+db.createCollection("messages")
+db.messages.insertOne({_id: 1, author: "Pabl1t0", message: "Hola", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 2, author: "Indio420", message: "¿Les quedaron hojas A4?", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 3, author: "ElJavi", message: "No me gustó la atención del negocio", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 4, author: "Pablito", message: "¿A qué hora cierran?", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 5, author: "Pablito", message: "¿Cuándo abren?", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 6, author: "Pablito", message: "¿Qué días abren?", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 7, author: "Pablito", message: "Me vinieron 398 hojas en el paquete de 400 hojas tamaño carta", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 8, author: "Pablito", message: "¿Puede ser que me haya dejado la cartera en el local? Es una negra", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 9, author: "Pablito", message: "¿Venden gomas Maped?", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+db.messages.insertOne({_id: 10, author: "Pablito", message: "¿Ustedes abren en año nuevo?", fyh: "Sat Mar 12 2022 09:11:43 GMT-0300"})
+
+
+3)
+db.products.find()
+db.messages.find()
+
+4)
+db.products.estimatedDocumentCount()
+db.messages.estimatedDocumentCount()
+
+5a)
+db.products.insertOne({_id: 11, title: "Sacapuntas", price: 4700})
+
+5b)
+db.products.find({"price": {$lt: 1000}})
+db.products.find({$and: [{"price": {$gte: 1000}}, {"price": {$lte: 3000}}]})
+db.products.find({"price": {$gt: 3000}})
+
+5c)
